@@ -23,6 +23,7 @@
     </build>
     <modules>
         <module>lambda</module>
+        <module>default-interface</module>
     </modules>
 
 </project>
