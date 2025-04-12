@@ -7,8 +7,8 @@ public class C {
         return myC;
     }
 
-    private D d1 = new D(); 16
+    private D d1 = new D();
 
-    private E e1 = new E(); 16 16
+    private E e1 = new E();
 
 }

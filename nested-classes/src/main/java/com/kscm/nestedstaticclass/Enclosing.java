@@ -9,7 +9,7 @@ public class Enclosing {
         }
     }
 
-    @Test
+    //@Test
     public void test() {
         Enclosing.StaticNested nested = new Enclosing.StaticNested();
         nested.run();

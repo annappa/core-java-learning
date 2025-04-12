@@ -26,3 +26,32 @@ There were two **motivations** that drove the changes in Java 8:
 [Functional Programming with Java 8](https://www.youtube.com/watch?v=Ee5t_EGjv0A)
 
 [Java 8 to 18: Most important changes in the Java Platform](https://www.youtube.com/watch?v=P7SI9mLwiqw)
+
+## Optional
+Java 8's Optional<T> is a container object that may or may not contain a non-null value. 
+It’s a better alternative to returning null and helps avoid NullPointerException. 
+
+#### When to Use Optional
+- As return types: Especially for methods that may not return a value.
+
+- To chain operations: Using map/filter/flatMap instead of nested null checks.
+
+- To indicate absence of a value explicitly, rather than returning null.
+
+#### Creating an Optional
+```java
+Optional<String> empty = Optional.empty(); // No value
+Optional<String> value = Optional.of("Hello"); // Non-null value
+Optional<String> nullable = Optional.ofNullable(null); // null-safe creation
+
+```
+
+#### Avoid These Common Pitfalls
+Don’t use Optional as method parameters or fields (overhead and not idiomatic).
+
+Don’t use Optional.get() without checking isPresent() — defeats the purpose.
+
+Don’t use Optional for every nullable value; use it where it enhances clarity.
+
+#### Examples 
+check - jdk8/src/main/java/com/kscm/corejava/jdk8/optional/MainOptionalExample.java
